@@ -1,0 +1,14 @@
+2025-07-04 23:29:54,910 - INFO - Request: GET http://127.0.0.1:8000/ Body: 
+2025-07-04 23:29:54,911 - INFO - Response status: 404 (Processed in 0.00s)
+2025-07-04 23:29:55,034 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico Body: 
+2025-07-04 23:29:55,035 - INFO - Response status: 404 (Processed in 0.00s)
+2025-07-04 23:30:48,718 - INFO - Request: GET http://127.0.0.1:8000/docs Body: 
+2025-07-04 23:30:48,719 - INFO - Response status: 200 (Processed in 0.00s)
+2025-07-04 23:30:49,133 - INFO - Request: GET http://127.0.0.1:8000/openapi.json Body: 
+2025-07-04 23:30:49,143 - INFO - Response status: 200 (Processed in 0.01s)
+2025-07-04 23:35:14,027 - INFO - Request: GET http://localhost:8000/docs Body: 
+2025-07-04 23:35:14,030 - INFO - Response status: 200 (Processed in 0.00s)
+2025-07-04 23:35:14,671 - INFO - Request: GET http://localhost:8000/openapi.json Body: 
+2025-07-04 23:35:14,673 - INFO - Response status: 200 (Processed in 0.00s)
+2025-07-04 23:36:22,348 - INFO - Request: GET http://localhost:8000/api/elements/ Body: 
+2025-07-04 23:36:22,447 - INFO - Response status: 200 (Processed in 0.10s)

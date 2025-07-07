@@ -1,0 +1,84 @@
+<div class="bg-gradient-to-br from-black via-gray-900 to-blue-900/50 p-6 rounded-lg shadow-lg border border-gray-800/50">
+  <h3 class="text-lg font-medium text-white mb-4">Metodología de cálculo</h3>
+  
+  <div class="relative">
+    @switch (currentStep()) {
+      @case (1) {
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
+              <span class="text-blue-200 font-bold">1</span>
+            </div>
+            <h4 class="ml-4 text-lg font-medium text-white">Subir imagen binaria</h4>
+          </div>
+          <p class="text-gray-300">
+            La imagen debe ser binaria, donde los píxeles blancos (255,255,255) representan la mancha 
+            y los píxeles negros (0,0,0) representan el fondo.
+          </p>
+        </div>
+      }
+      
+      @case (2) {
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
+              <span class="text-blue-200 font-bold">2</span>
+            </div>
+            <h4 class="ml-4 text-lg font-medium text-white">Generar puntos aleatorios</h4>
+          </div>
+          <p class="text-gray-300">
+            Se generan <em class="text-white">n</em> puntos aleatorios distribuidos uniformemente sobre el área de la imagen.
+            Puedes ajustar la cantidad de puntos con el control deslizante.
+          </p>
+        </div>
+      }
+      
+      @case (3) {
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
+              <span class="text-blue-200 font-bold">3</span>
+            </div>
+            <h4 class="ml-4 text-lg font-medium text-white">Contar puntos en la mancha</h4>
+          </div>
+          <p class="text-gray-300">
+            Para cada punto, verificamos si cae en un píxel blanco (dentro de la mancha) o negro (fuera de la mancha).
+            Contamos cuántos puntos (<em class="text-white">ni</em>) caen dentro de la mancha.
+          </p>
+        </div>
+      }
+      
+      @case (4) {
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
+              <span class="text-blue-200 font-bold">4</span>
+            </div>
+            <h4 class="ml-4 text-lg font-medium text-white">Calcular área estimada</h4>
+          </div>
+          <p class="text-gray-300">
+            El área de la mancha se estima como: <br>
+            <span class="font-mono text-blue-300 bg-black/30 px-2 py-1 rounded">Área = (Área total) × (ni / n)</span>
+          </p>
+        </div>
+      }
+    }
+    
+    <div class="flex justify-between mt-6">
+      <button 
+        (click)="prevStep()"
+        [disabled]="currentStep() === 1"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gradient-to-r from-teal-100 to-lime-100 hover:bg-gradient-to-l hover:from-teal-100 hover:to-lime-100 focus:ring-4 focus:outline-none focus:ring-lime-200 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Anterior
+      </button>
+      <button 
+        (click)="nextStep()"
+        [disabled]="currentStep() === totalSteps"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>

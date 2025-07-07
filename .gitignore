@@ -1,0 +1,15 @@
+# Node / Angular
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# VS Code
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

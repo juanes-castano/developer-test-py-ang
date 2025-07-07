@@ -1,0 +1,31 @@
+<div class="min-h-screen bg-black">
+  <nav class="bg-gray-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <span class="text-xl font-semibold text-gray-100">{{ title }}</span>
+        </div>
+        <div class="flex space-x-8">
+          <a 
+            routerLink="/calculate" 
+            routerLinkActive="border-blue-400 text-gray-100"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 hover:border-gray-500 transition-colors"
+          >
+            Calcular área
+          </a>
+          <a 
+            routerLink="/history" 
+            routerLinkActive="border-blue-400 text-gray-100"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 hover:border-gray-500 transition-colors"
+          >
+            Historial
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 bg-black text-gray-200">
+    <router-outlet></router-outlet>
+  </main>
+</div>

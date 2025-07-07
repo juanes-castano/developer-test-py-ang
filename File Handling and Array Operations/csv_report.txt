@@ -1,0 +1,5 @@
+Age: mean=31.077, std=7.407
+Weight: mean=75.962, std=4.489
+Height: mean=169.596, std=4.815
+Cholesterol: mean=198.558, std=8.651
+HeartRate: mean=87.596, std=16.137
